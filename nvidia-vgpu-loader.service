@@ -1,0 +1,13 @@
+[Unit]
+Description=NVIDIA vGPU Loader
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/opt/nvidia-vgpu-loader
+ExecStart=/opt/nvidia-vgpu-loader/nvidia-vgpu-loader
+User=root
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
